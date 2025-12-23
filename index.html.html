@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المستشار محمد عبد الجواد | أفضل محامي في مصر والشرق الأوسط</title>
+    
+    <meta name="description" content="المركز القانوني العالمي برئاسة المستشار محمد عبد الجواد، خدمات قانونية في مصر والشرق الأوسط.">
+    <meta name="keywords" content="محامي في مصر, محامي نقض, محمد عبد الجواد">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --gold: #D4AF37; --navy: #0F172A; }
+        body { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; margin: 0; padding: 0; }
+        .gold-text { color: var(--gold); }
+        .bg-navy { background-color: var(--navy); }
+        .btn-gold { background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); transition: 0.3s; color: white; }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('المستشار محمد عبد الجواد.jpeg');
+            background-size: cover;
+            background-position: center;
+            min-height: 90vh;
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <nav class="fixed w-full z-50 bg-[#0F172A] text-white shadow-2xl border-b border-gold/30">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="لوجو المركز.jpeg" alt="Logo" class="h-12 w-12 rounded-full border border-gold">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold gold-text" data-key="logo">المركز القانوني العالمي</span>
+                    <span class="text-[10px] text-gray-400" data-key="founder">المستشار محمد عبد الجواد</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex space-x-reverse space-x-6 items-center">
+                <a href="#about" class="hover:text-gold transition text-sm" data-key="nav_about">من نحن</a>
+                <a href="#services" class="hover:text-gold transition text-sm" data-key="nav_services">خدماتنا</a>
+                <a href="#team" class="hover:text-gold transition text-sm" data-key="nav_team">الفريق</a>
+                <select onchange="changeLanguage(this.value)" class="bg-transparent border border-gold text-gold text-xs rounded p-1">
+                    <option value="ar">العربية</option>
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="it">Italiano</option>
+                    <option value="de">Deutsch</option>
+                </select>
+                <a href="tel:01117008483" class="bg-gold/10 px-4 py-1 rounded text-gold border border-gold/30 font-bold text-sm">01117008483</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative flex items-center justify-center text-center hero-bg pt-20">
+        <div class="px-6 max-w-5xl py-20">
+            <h2 class="text-gold text-xl mb-4 font-light" data-key="hero_sub">نخبة من المستشارين في خدمتكم</h2>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" data-key="hero_title">المركز القانوني العالمي: ثقتك لحلول قانونية راسخة</h1>
+            <p class="text-lg text-gray-300 mb-10 mx-auto" data-key="hero_desc">خبرة قانونية متعددة التخصصات في مصر والشرق الأوسط - حماية حقوقك هي مهمتنا الأولى.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="btn-gold px-10 py-4 rounded-full font-bold shadow-xl" data-key="cta_btn">اطلب استشارة</a>
+                <a href="https://wa.me/201117008483" class="bg-green-600 text-white px-10 py-4 rounded-full font-bold shadow-xl">WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 text-[#0F172A] border-r-4 border-gold pr-4" data-key="intro_title">لماذا المركز القانوني العالمي؟</h2>
+                <p class="text-gray-700 leading-loose text-lg mb-6" data-key="intro_text">
+                    المركز القانوني العالمي هو شركة محاماة مصرية رائدة تتمتع بخبرة واسعة في مجالات قانونية متعددة. نقدم حلولاً قانونية استباقية وشاملة لكل من الأفراد والشركات.
+                </p>
+            </div>
+            <img src="المستشار محمد عبد الجواد.jpeg" class="rounded-lg shadow-xl border-b-4 border-gold">
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-slate-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-16 text-[#0F172A]" data-key="nav_services">خدماتنا القانونية</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded shadow hover:border-gold border-t-4 border-transparent transition">
+                    <div class="text-3xl mb-4">🏛️</div>
+                    <h3 class="font-bold mb-2">القانون الجنائي</h3>
+                    <p class="text-sm text-gray-600">الدفاع والتمثيل في كافة القضايا الجنائية والجنايات.</p>
+                </div>
+                <div class="bg-white p-8 rounded shadow hover:border-gold border-t-4 border-transparent transition">
+                    <div class="text-3xl mb-4">💼</div>
+                    <h3 class="font-bold mb-2">القانون التجاري</h3>
+                    <p class="text-sm text-gray-600">تأسيس الشركات، صياغة العقود، ونزاعات الاستثمار.</p>
+                </div>
+                <div class="bg-white p-8 rounded shadow hover:border-gold border-t-4 border-transparent transition">
+                    <div class="text-3xl mb-4">⚖️</div>
+                    <h3 class="font-bold mb-2">النقض والإدارية</h3>
+                    <p class="text-sm text-gray-600">تمثيل قانوني أمام المحاكم العليا والدستورية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-16 text-[#0F172A]" data-key="team_title">نخبة المستشارين</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="w-44 h-44 rounded-full mx-auto mb-6 border-4 border-gold overflow-hidden">
+                        <img src="المستشار محمد عبد الجواد (2).jpeg" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold">المستشار/ محمد عبد الجواد</h3>
+                    <p class="text-gold text-sm font-bold">محامي بالنقض والدستورية العليا</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-44 h-44 rounded-full mx-auto mb-6 border-4 border-gray-200 overflow-hidden">
+                        <img src="ا.وليد.jpeg" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold">الأستاذ/ وليد رمضان</h3>
+                    <p class="text-gray-500 text-sm">محامي بالنقض والدستورية العليا</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-44 h-44 rounded-full mx-auto mb-6 border-4 border-gray-200 overflow-hidden">
+                        <img src="صلاح.jpeg" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold">الأستاذ/ صلاح عبد الله</h3>
+                    <p class="text-gray-500 text-sm">محامي بالنقض والدستورية العليا</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-[#0F172A] text-white py-16">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-8 gold-text" data-key="contact_title">تواصل معنا</h2>
+                <div class="space-y-4">
+                    <p>📞 01117008483 / 01026955755</p>
+                    <p>📧 mohamed321jawad@gmail.com</p>
+                    <p>📍 قسم دار السلام، القاهرة، مصر</p>
+                </div>
+            </div>
+            <form class="space-y-4">
+                <input type="text" placeholder="الاسم" class="w-full p-3 rounded bg-white/10 text-white outline-none">
+                <textarea placeholder="رسالتك" class="w-full p-3 rounded bg-white/10 text-white outline-none"></textarea>
+                <button class="btn-gold w-full py-3 rounded font-bold uppercase">إرسال</button>
+            </form>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-white/10 text-gray-500 text-xs">
+            © 2025 المركز القانوني العالمي - المستشار محمد عبد الجواد
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            ar: {
+                logo: "المركز القانوني العالمي", founder: "المستشار محمد عبد الجواد",
+                nav_about: "من نحن", nav_services: "خدماتنا", nav_team: "الفريق",
+                hero_title: "المركز القانوني العالمي: ثقتك لحلول قانونية راسخة",
+                hero_sub: "نخبة من المستشارين في خدمتكم في مصر والشرق الأوسط",
+                hero_desc: "خبرة قانونية متعددة التخصصات - حماية حقوقك هي مهمتنا الأولى.",
+                cta_btn: "اطلب استشارة قانونية", intro_title: "لماذا المركز القانوني العالمي؟",
+                team_title: "نخبة المستشارين", contact_title: "تواصل معنا الآن"
+            },
+            en: {
+                logo: "International Legal Center", founder: "Adv. Mohamed Abdel Gawad",
+                nav_about: "About Us", nav_services: "Services", nav_team: "Our Team",
+                hero_title: "Global Legal Center: Solid Solutions You Can Trust",
+                hero_sub: "Elite legal advisors in Egypt & ME",
+                hero_desc: "Legal expertise - Protecting your rights is our priority.",
+                cta_btn: "Request Consultation", intro_title: "Why Choose Us?",
+                team_title: "Elite Counselors", contact_title: "Contact Us Now"
+            }
+            // يمكن إضافة باقي اللغات بنفس النمط هنا
+        };
+
+        function changeLanguage(lang) {
+            document.documentElement.dir = (lang === 'ar' ? 'rtl' : 'ltr');
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            document.body.style.fontFamily = (lang === 'ar' ? "'Cairo', sans-serif" : "'Playfair Display', serif");
+        }
+    </script>
+</body>
+</html>
