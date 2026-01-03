@@ -1,189 +1,412 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المستشار محمد عبد الجواد | أفضل محامي في مصر والشرق الأوسط</title>
+    <title>المركز القانوني العالمي | Global Legal Center</title>
     
-    <meta name="description" content="المركز القانوني العالمي برئاسة المستشار محمد عبد الجواد، خدمات قانونية في مصر والشرق الأوسط.">
-    <meta name="keywords" content="محامي في مصر, محامي نقض, محمد عبد الجواد">
-
+    <!-- روابط CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- إضافة ملف الترجمات -->
+    <script src="translations.js"></script>
     
     <style>
-        :root { --gold: #D4AF37; --navy: #0F172A; }
-        body { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; margin: 0; padding: 0; }
-        .gold-text { color: var(--gold); }
-        .bg-navy { background-color: var(--navy); }
-        .btn-gold { background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); transition: 0.3s; color: white; }
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-blue: #3b82f6;
+            --accent-gold: #d4af37;
+            --dark-gray: #374151;
+            --light-gray: #f9fafb;
+        }
         
-        .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('المستشار محمد عبد الجواد.jpeg');
-            background-size: cover;
-            background-position: center;
-            min-height: 90vh;
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+        }
+        
+        body[dir="ltr"] {
+            font-family: 'Montserrat', sans-serif;
+            direction: ltr;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-gold);
+        }
+        
+        body[dir="ltr"] .section-title::after {
+            right: auto;
+            left: 0;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .lang-btn.active {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .lang-transition {
+            transition: opacity 0.3s ease;
+        }
+        
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
-<body class="bg-slate-50">
+<body class="bg-gray-50 text-gray-800" dir="rtl">
+    <!-- زر تغيير اللغة -->
+    <div class="fixed top-4 right-4 z-50 bg-white rounded-full shadow-lg p-2 flex items-center space-x-2 space-x-reverse">
+        <button class="lang-btn w-8 h-8 rounded-full bg-blue-900 text-white text-sm" data-lang="ar" title="العربية">ع</button>
+        <button class="lang-btn w-8 h-8 rounded-full bg-gray-200 text-gray-800 text-sm" data-lang="en" title="English">EN</button>
+        <button class="lang-btn w-8 h-8 rounded-full bg-gray-200 text-gray-800 text-sm" data-lang="fr" title="Français">FR</button>
+        <button class="lang-btn w-8 h-8 rounded-full bg-gray-200 text-gray-800 text-sm" data-lang="it" title="Italiano">IT</button>
+        <button class="lang-btn w-8 h-8 rounded-full bg-gray-200 text-gray-800 text-sm" data-lang="de" title="Deutsch">DE</button>
+    </div>
 
-    <nav class="fixed w-full z-50 bg-[#0F172A] text-white shadow-2xl border-b border-gold/30">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="لوجو المركز.jpeg" alt="Logo" class="h-12 w-12 rounded-full border border-gold">
-                <div class="flex flex-col">
-                    <span class="text-lg font-bold gold-text" data-key="logo">المركز القانوني العالمي</span>
-                    <span class="text-[10px] text-gray-400" data-key="founder">المستشار محمد عبد الجواد</span>
+    <!-- القائمة الرئيسية -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- اللوجو -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="Gemini_Generated_Image_hrb8s4hrb8s4hrb8.png" alt="Global Legal Center Logo" class="logo-img">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-blue-900" id="site-title">المركز القانوني العالمي</h1>
+                        <p class="text-sm text-gray-600" id="site-subtitle">Global Legal Center</p>
+                    </div>
+                </div>
+                
+                <!-- زر القائمة للموبايل -->
+                <button id="mobile-menu-button" class="md:hidden text-blue-900">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                
+                <!-- القائمة للكمبيوتر -->
+                <div class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="text-blue-900 font-medium hover:text-blue-700 transition" data-i18n="nav.home">الرئيسية</a>
+                    <a href="#services" class="text-gray-700 font-medium hover:text-blue-700 transition" data-i18n="nav.services">خدماتنا</a>
+                    <a href="#team" class="text-gray-700 font-medium hover:text-blue-700 transition" data-i18n="nav.team">فريقنا</a>
+                    <a href="#updates" class="text-gray-700 font-medium hover:text-blue-700 transition" data-i18n="nav.updates">التحديثات</a>
+                    <a href="#contact" class="text-gray-700 font-medium hover:text-blue-700 transition" data-i18n="nav.contact">اتصل بنا</a>
                 </div>
             </div>
             
-            <div class="hidden md:flex space-x-reverse space-x-6 items-center">
-                <a href="#about" class="hover:text-gold transition text-sm" data-key="nav_about">من نحن</a>
-                <a href="#services" class="hover:text-gold transition text-sm" data-key="nav_services">خدماتنا</a>
-                <a href="#team" class="hover:text-gold transition text-sm" data-key="nav_team">الفريق</a>
-                <select onchange="changeLanguage(this.value)" class="bg-transparent border border-gold text-gold text-xs rounded p-1">
-                    <option value="ar">العربية</option>
-                    <option value="en">English</option>
-                    <option value="fr">Français</option>
-                    <option value="it">Italiano</option>
-                    <option value="de">Deutsch</option>
-                </select>
-                <a href="tel:01117008483" class="bg-gold/10 px-4 py-1 rounded text-gold border border-gold/30 font-bold text-sm">01117008483</a>
+            <!-- القائمة للموبايل -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t pt-4">
+                <a href="#home" class="block py-2 text-blue-900 font-medium" data-i18n="nav.home">الرئيسية</a>
+                <a href="#services" class="block py-2 text-gray-700 font-medium" data-i18n="nav.services">خدماتنا</a>
+                <a href="#team" class="block py-2 text-gray-700 font-medium" data-i18n="nav.team">فريقنا</a>
+                <a href="#updates" class="block py-2 text-gray-700 font-medium" data-i18n="nav.updates">التحديثات</a>
+                <a href="#contact" class="block py-2 text-gray-700 font-medium" data-i18n="nav.contact">اتصل بنا</a>
             </div>
         </div>
     </nav>
 
-    <header class="relative flex items-center justify-center text-center hero-bg pt-20">
-        <div class="px-6 max-w-5xl py-20">
-            <h2 class="text-gold text-xl mb-4 font-light" data-key="hero_sub">نخبة من المستشارين في خدمتكم</h2>
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" data-key="hero_title">المركز القانوني العالمي: ثقتك لحلول قانونية راسخة</h1>
-            <p class="text-lg text-gray-300 mb-10 mx-auto" data-key="hero_desc">خبرة قانونية متعددة التخصصات في مصر والشرق الأوسط - حماية حقوقك هي مهمتنا الأولى.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#contact" class="btn-gold px-10 py-4 rounded-full font-bold shadow-xl" data-key="cta_btn">اطلب استشارة</a>
-                <a href="https://wa.me/201117008483" class="bg-green-600 text-white px-10 py-4 rounded-full font-bold shadow-xl">WhatsApp</a>
-            </div>
-        </div>
-    </header>
-
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold mb-6 text-[#0F172A] border-r-4 border-gold pr-4" data-key="intro_title">لماذا المركز القانوني العالمي؟</h2>
-                <p class="text-gray-700 leading-loose text-lg mb-6" data-key="intro_text">
-                    المركز القانوني العالمي هو شركة محاماة مصرية رائدة تتمتع بخبرة واسعة في مجالات قانونية متعددة. نقدم حلولاً قانونية استباقية وشاملة لكل من الأفراد والشركات.
-                </p>
-            </div>
-            <img src="المستشار محمد عبد الجواد.jpeg" class="rounded-lg shadow-xl border-b-4 border-gold">
-        </div>
-    </section>
-
-    <section id="services" class="py-20 bg-slate-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-16 text-[#0F172A]" data-key="nav_services">خدماتنا القانونية</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded shadow hover:border-gold border-t-4 border-transparent transition">
-                    <div class="text-3xl mb-4">🏛️</div>
-                    <h3 class="font-bold mb-2">القانون الجنائي</h3>
-                    <p class="text-sm text-gray-600">الدفاع والتمثيل في كافة القضايا الجنائية والجنايات.</p>
+    <!-- القسم الرئيسي -->
+    <section id="home" class="py-12 md:py-20 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6" data-i18n="hero.title">المركز القانوني العالمي</h2>
+                    <p class="text-lg md:text-xl mb-8 leading-relaxed" data-i18n="hero.subtitle">الخبرة القضائية مع الحلول القانونية المبتكرة</p>
+                    <p class="mb-8 text-blue-100" data-i18n="hero.description">نحن لا نقدم مجرد استشارات قانونية، بل نمنحكم حلولاً متكاملة تضمن حماية حقوقكم</p>
+                    <a href="#contact" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105" data-i18n="hero.cta">تواصل معنا الآن</a>
                 </div>
-                <div class="bg-white p-8 rounded shadow hover:border-gold border-t-4 border-transparent transition">
-                    <div class="text-3xl mb-4">💼</div>
-                    <h3 class="font-bold mb-2">القانون التجاري</h3>
-                    <p class="text-sm text-gray-600">تأسيس الشركات، صياغة العقود، ونزاعات الاستثمار.</p>
-                </div>
-                <div class="bg-white p-8 rounded shadow hover:border-gold border-t-4 border-transparent transition">
-                    <div class="text-3xl mb-4">⚖️</div>
-                    <h3 class="font-bold mb-2">النقض والإدارية</h3>
-                    <p class="text-sm text-gray-600">تمثيل قانوني أمام المحاكم العليا والدستورية.</p>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-700 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+                            <img src="Gemini_Generated_Image_vyaqd4vyaqd4vyaq.png" 
+                                 alt="Mohamed Abd-El-Gawad" 
+                                 class="profile-img">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+                            <i class="fas fa-balance-scale text-blue-900 text-3xl"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="team" class="py-20 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-16 text-[#0F172A]" data-key="team_title">نخبة المستشارين</h2>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="text-center">
-                    <div class="w-44 h-44 rounded-full mx-auto mb-6 border-4 border-gold overflow-hidden">
-                        <img src="المستشار محمد عبد الجواد (2).jpeg" class="w-full h-full object-cover">
+    <!-- قسم الخدمات -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-4 section-title" data-i18n="services.title">خدماتنا القانونية</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto" data-i18n="services.subtitle">نخبة من المتخصصين بقيادة المستشار محمد عبد الجواد</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-city text-blue-900 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold">المستشار/ محمد عبد الجواد</h3>
-                    <p class="text-gold text-sm font-bold">محامي بالنقض والدستورية العليا</p>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4" data-i18n="services.1.title">قانون الشركات</h3>
+                    <p class="text-gray-700" data-i18n="services.1.description">تأسيس الكيانات القانونية وحوكمة الاستثمارات</p>
                 </div>
-                <div class="text-center">
-                    <div class="w-44 h-44 rounded-full mx-auto mb-6 border-4 border-gray-200 overflow-hidden">
-                        <img src="ا.وليد.jpeg" class="w-full h-full object-cover">
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-gavel text-blue-900 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold">الأستاذ/ وليد رمضان</h3>
-                    <p class="text-gray-500 text-sm">محامي بالنقض والدستورية العليا</p>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4" data-i18n="services.2.title">محكمة النقض</h3>
+                    <p class="text-gray-700" data-i18n="services.2.description">طعون الجنايات والمدني مذكرات قانونية دقيقة</p>
                 </div>
-                <div class="text-center">
-                    <div class="w-44 h-44 rounded-full mx-auto mb-6 border-4 border-gray-200 overflow-hidden">
-                        <img src="صلاح.jpeg" class="w-full h-full object-cover">
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-blue-900 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold">الأستاذ/ صلاح عبد الله</h3>
-                    <p class="text-gray-500 text-sm">محامي بالنقض والدستورية العليا</p>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4" data-i18n="services.3.title">القانون الدولي</h3>
+                    <p class="text-gray-700" data-i18n="services.3.description">توثيق زواج الأجانب وإجراءات الإقامة</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="bg-[#0F172A] text-white py-16">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
-            <div>
-                <h2 class="text-3xl font-bold mb-8 gold-text" data-key="contact_title">تواصل معنا</h2>
-                <div class="space-y-4">
-                    <p>📞 01117008483 / 01026955755</p>
-                    <p>📧 mohamed321jawad@gmail.com</p>
-                    <p>📍 قسم دار السلام، القاهرة، مصر</p>
+    <!-- قسم الفريق -->
+    <section id="team" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-12 section-title" data-i18n="team.title">فريقنا القانوني</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-b from-blue-50 to-white rounded-xl shadow-lg overflow-hidden border border-blue-100 p-6">
+                    <div class="flex items-center mb-6">
+                        <div class="w-20 h-20 bg-blue-900 rounded-full overflow-hidden mr-4">
+                            <div class="w-full h-full bg-blue-700 flex items-center justify-center">
+                                <i class="fas fa-user-tie text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-900">المستشار / محمد عبد الجواد</h3>
+                            <p class="text-gray-600 text-sm" data-i18n="team.1.position">المحامي بالنقض والإدارية العليا</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4" data-i18n="team.1.description">المؤسس والمدير التنفيذي للمركز القانوني العالمي</p>
+                    
+                    <a href="https://wa.me/201117008483" target="_blank" class="inline-flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                        <i class="fab fa-whatsapp ml-2 text-xl"></i>
+                        <span data-i18n="team.contact">تواصل عبر واتساب</span>
+                    </a>
+                    <p class="text-center text-gray-600 mt-2 text-sm">واتساب: 01117008483</p>
                 </div>
             </div>
-            <form class="space-y-4">
-                <input type="text" placeholder="الاسم" class="w-full p-3 rounded bg-white/10 text-white outline-none">
-                <textarea placeholder="رسالتك" class="w-full p-3 rounded bg-white/10 text-white outline-none"></textarea>
-                <button class="btn-gold w-full py-3 rounded font-bold uppercase">إرسال</button>
-            </form>
         </div>
-        <div class="text-center mt-12 pt-8 border-t border-white/10 text-gray-500 text-xs">
-            © 2025 المركز القانوني العالمي - المستشار محمد عبد الجواد
+    </section>
+
+    <!-- قسم التحديثات -->
+    <section id="updates" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-12 section-title" data-i18n="updates.title">التحديثات القانونية</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto" data-i18n="updates.subtitle">أبرز التعديلات التشريعية في القوانين المصرية</p>
+        </div>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-12 section-title" data-i18n="contact.title">اتصل بنا</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- معلومات الاتصال -->
+                <div>
+                    <div class="bg-blue-50 rounded-xl p-8 mb-8">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-6" data-i18n="contact.subtitle">تواصل مع المركز القانوني</h3>
+                        
+                        <div class="space-y-6">
+                            <!-- واتساب -->
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-whatsapp text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900" data-i18n="contact.whatsapp">واتساب</h4>
+                                    <a href="https://wa.me/201117008483" target="_blank" class="text-gray-700 hover:text-blue-700">01117008483</a>
+                                </div>
+                            </div>
+                            
+                            <!-- إيميل -->
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900" data-i18n="contact.email">البريد الإلكتروني</h4>
+                                    <a href="mailto:mohamed321jawad@gmail.com" class="text-gray-700 hover:text-blue-700">mohamed321jawad@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- خريطة -->
+                <div>
+                    <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg h-full">
+                        <div class="h-64 md:h-full bg-gray-300 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <i class="fas fa-map-marked-alt text-blue-900 text-6xl mb-6"></i>
+                                <h3 class="text-2xl font-bold text-blue-900 mb-4" data-i18n="contact.map.title">موقعنا</h3>
+                                <p class="text-gray-700 mb-6" data-i18n="contact.map.description">دار السلام، القاهرة</p>
+                                <a href="https://maps.google.com/?q=دار+السلام+القاهرة" target="_blank" class="inline-flex items-center justify-center bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                                    <i class="fas fa-external-link-alt ml-2"></i>
+                                    <span data-i18n="contact.map.button">افتح الخريطة</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-3 space-x-reverse">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                            <img src="Gemini_Generated_Image_hrb8s4hrb8s4hrb8.png" alt="Logo" class="logo-img" style="width: 24px; height: 24px;">
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold">المركز القانوني العالمي</h2>
+                            <p class="text-blue-200 text-sm">Global Legal Center</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-blue-200 max-w-md" data-i18n="footer.description">حلول قانونية احترافية</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-blue-200" data-i18n="footer.copyright">© 2025 المركز القانوني العالمي</p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- كود الجافاسكريبت -->
     <script>
-        const translations = {
-            ar: {
-                logo: "المركز القانوني العالمي", founder: "المستشار محمد عبد الجواد",
-                nav_about: "من نحن", nav_services: "خدماتنا", nav_team: "الفريق",
-                hero_title: "المركز القانوني العالمي: ثقتك لحلول قانونية راسخة",
-                hero_sub: "نخبة من المستشارين في خدمتكم في مصر والشرق الأوسط",
-                hero_desc: "خبرة قانونية متعددة التخصصات - حماية حقوقك هي مهمتنا الأولى.",
-                cta_btn: "اطلب استشارة قانونية", intro_title: "لماذا المركز القانوني العالمي؟",
-                team_title: "نخبة المستشارين", contact_title: "تواصل معنا الآن"
-            },
-            en: {
-                logo: "International Legal Center", founder: "Adv. Mohamed Abdel Gawad",
-                nav_about: "About Us", nav_services: "Services", nav_team: "Our Team",
-                hero_title: "Global Legal Center: Solid Solutions You Can Trust",
-                hero_sub: "Elite legal advisors in Egypt & ME",
-                hero_desc: "Legal expertise - Protecting your rights is our priority.",
-                cta_btn: "Request Consultation", intro_title: "Why Choose Us?",
-                team_title: "Elite Counselors", contact_title: "Contact Us Now"
-            }
-            // يمكن إضافة باقي اللغات بنفس النمط هنا
-        };
-
+        // كائن الترجمات (سيتم تحميله من translations.js)
+        let currentLang = 'ar';
+        
+        // دالة تغيير اللغة
         function changeLanguage(lang) {
-            document.documentElement.dir = (lang === 'ar' ? 'rtl' : 'ltr');
-            document.querySelectorAll('[data-key]').forEach(el => {
-                const key = el.getAttribute('data-key');
-                if (translations[lang] && translations[lang][key]) {
-                    el.textContent = translations[lang][key];
+            currentLang = lang;
+            
+            // تحديث أزرار اللغة
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('bg-blue-900', 'text-white');
+                    btn.classList.remove('bg-gray-200', 'text-gray-800');
+                } else {
+                    btn.classList.remove('bg-blue-900', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-800');
                 }
             });
-            document.body.style.fontFamily = (lang === 'ar' ? "'Cairo', sans-serif" : "'Playfair Display', serif");
+            
+            // تحديث عنوان الموقع
+            if (lang === 'ar') {
+                document.getElementById('site-title').textContent = 'المركز القانوني العالمي';
+                document.getElementById('site-subtitle').textContent = 'Global Legal Center';
+                document.body.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+                document.documentElement.setAttribute('dir', 'rtl');
+            } else {
+                document.getElementById('site-title').textContent = 'Global Legal Center';
+                document.getElementById('site-subtitle').textContent = '';
+                document.body.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', lang);
+                document.documentElement.setAttribute('dir', 'ltr');
+            }
+            
+            // تحديث النصوص
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (window.translations && window.translations[lang] && window.translations[lang][key]) {
+                    element.textContent = window.translations[lang][key];
+                }
+            });
         }
+        
+        // عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            // تعيين اللغة العربية كافتراضية
+            changeLanguage('ar');
+            
+            // إضافة أحداث لأزرار اللغة
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    changeLanguage(lang);
+                });
+            });
+            
+            // القائمة للموبايل
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+            
+            // إغلاق القائمة عند النقر على رابط
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                });
+            });
+        });
     </script>
 </body>
 </html>
